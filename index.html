@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Finanças">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <title>Finanças</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <section id="tab-hoje" class="tab"></section>
+    <section id="tab-calendario" class="tab" hidden></section>
+    <section id="tab-fixos" class="tab" hidden></section>
+    <section id="tab-salario" class="tab" hidden></section>
+    <section id="tab-historico" class="tab" hidden></section>
+  </main>
+
+  <div id="add-bar">
+    <button id="btn-add-gasto" class="btn-primary big" type="button">+ Adicionar gasto</button>
+  </div>
+
+  <nav id="tabbar" aria-label="Navegação">
+    <button type="button" data-tab="hoje" data-label="Hoje"></button>
+    <button type="button" data-tab="calendario" data-label="Calendário"></button>
+    <button type="button" data-tab="fixos" data-label="Fixos"></button>
+    <button type="button" data-tab="salario" data-label="Salário"></button>
+    <button type="button" data-tab="historico" data-label="Histórico"></button>
+  </nav>
+
+  <div id="overlay-root"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
